@@ -8,3 +8,11 @@ func TestCreateDollarObject(t *testing.T) {
 		t.Errorf("Expected 5, got %v", five.Amount())
 	}
 }
+
+func TestMultiplyDollar(t *testing.T) {
+	five := NewDollar(5)
+	result := five.Times(2)
+	if result.Amount() != 10 {
+		t.Errorf("Expected 10, got %v", result.Amount())
+	}
+}
