@@ -20,3 +20,16 @@ func TestMultiplyDollar(t *testing.T) {
 		t.Errorf("Expected 15, got %v", product.Amount())
 	}
 }
+
+func TestEquality(t *testing.T) {
+	a := NewDollar(5)
+	isTrue := NewDollar(5).Equal(a)
+	isFalse := NewDollar(6).Equal(a)
+	if isTrue != true {
+		t.Errorf("Expected true, got %v", isTrue)
+	}
+	if isFalse != false {
+		t.Errorf("Expected false, got %v", isFalse)
+	}
+
+}
