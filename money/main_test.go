@@ -15,4 +15,8 @@ func TestMultiplyDollar(t *testing.T) {
 	if result.Amount() != 10 {
 		t.Errorf("Expected 10, got %v", result.Amount())
 	}
+	product := five.Times(3)
+	if product.Amount() != 15 {
+		t.Errorf("Expected 15, got %v", product.Amount())
+	}
 }
