@@ -33,3 +33,11 @@ func TestEquality(t *testing.T) {
 	}
 
 }
+
+func TestFrancMultiplication(t *testing.T) {
+	five := NewFranc(5)
+	result := five.Times(2)
+	if result.Amount() != 10 {
+		t.Errorf("Expected 10, got %v", result.Amount())
+	}
+}
