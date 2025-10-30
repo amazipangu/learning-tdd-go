@@ -51,7 +51,7 @@ func TestFrancMultiplication(t *testing.T) {
 
 func TestFrancEquality(t *testing.T) {
 	five := NewFranc(5)
-	isTrue := NewFranc(5).Eqaul(five)
+	isTrue := NewFranc(5).Equal(five)
 	isFalse := NewFranc(6).Equal(five)
 	if isTrue != true {
 		t.Errorf("Expected true, got %v", isTrue)
