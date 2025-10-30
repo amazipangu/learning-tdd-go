@@ -35,3 +35,7 @@ func (f *Franc) Amount() int {
 func (f *Franc) Times(multiplier int) *Franc {
 	return &Franc{amount: f.amount * multiplier}
 }
+
+func (f *Franc) Equal(other *Franc) bool {
+	return f.amount == other.amount
+}
